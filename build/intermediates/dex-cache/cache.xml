@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="D:\AndroidStudioProject\CamcodecAS\app\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.0"
+        sha1="457a1759011163a7a1c16502f927c481f244cd3a">
+        <dex dex="D:\AndroidStudioProject\CamcodecAS\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_ee7e690aded20272054255c0c35e07fdb26a5f64\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\lsaac_huang\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="D:\AndroidStudioProject\CamcodecAS\app\build\intermediates\transforms\dex\debug\folders\1000\10\support-v4-19.1.0_4bbf71613b8d07a070075d3bf862681c5cacf33b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="D:\AndroidStudioProject\CamcodecAS\app\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="27.0.0"
+        sha1="c323c36ecc68965c4cfb460f7721113d2b61ed03">
+        <dex dex="D:\AndroidStudioProject\CamcodecAS\app\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_1757107cd301c003b02d1617867e72717c36c82f\classes.dex" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="C:\Users\lsaac_huang\AppData\Local\Android\Sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="27.0.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
+        <dex dex="D:\AndroidStudioProject\CamcodecAS\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0_4bbf71613b8d07a070075d3bf862681c5cacf33b.jar" />
+    </item>
+
+</items>
