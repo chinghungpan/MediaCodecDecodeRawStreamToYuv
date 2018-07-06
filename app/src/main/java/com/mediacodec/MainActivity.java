@@ -145,12 +145,12 @@ public class MainActivity extends Activity {
                     }
 
                     decoder.start();
-//					Log.d("testCodec", "decoder.start() called");
+
 
                     ByteBuffer[] inputBuffers = decoder.getInputBuffers();
                     ByteBuffer[] outputBuffers = decoder.getOutputBuffers();
 
-                    long startMs = System.currentTimeMillis();
+//                    long startMs = System.currentTimeMillis();
 
                     int i = 0;
                     while (!Thread.interrupted()) {
@@ -165,7 +165,7 @@ public class MainActivity extends Activity {
 
                         int inIndex = 0;
                         while ((inIndex = decoder.dequeueInputBuffer(1)) < 0)
-                            ;//判断解码器输入队列缓冲区有多少个buffer==，inIndex。
+                            ;
 
                         if (inIndex >= 0) {
                             ByteBuffer buffer = inputBuffers[inIndex];//取出解码器输入队列缓冲区最后一个buffer
@@ -178,13 +178,6 @@ public class MainActivity extends Activity {
                                         MediaCodec.BUFFER_FLAG_END_OF_STREAM);
                                 break;
                             } else {
-
-                                try {
-//                                    Thread.sleep(33);
-//									Thread.sleep(1000);
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
 
                                 Log.d("testCodec", "sample size: "
                                         + sampleSize);
@@ -232,7 +225,6 @@ public class MainActivity extends Activity {
                                     outbuffer.get(outData);
                                     saveFileToYUV_JPG_Bitmap(outData);
 
-//									decoder.releaseOutputBuffer(outIndex, true);//冲缓冲区的出队列，然后解码显示到surfaceview上。
                                     decoder.releaseOutputBuffer(outIndex, false);
                                     break;
                             }
@@ -284,18 +276,11 @@ public class MainActivity extends Activity {
                             "video/hevc", MediaCodecWidth, MediaCodecHeight);
 
 
-//					Log.e("testCodec","sps="+Base64.encodeToString(header_sps,Base64.DEFAULT));
-//					Log.e("testCodec","pps="+Base64.encodeToString(header_pps,Base64.DEFAULT));
                     Log.e("testCodec", "header_vps_sps_pps.length=" + header_vps_sps_pps.length );
-//					for(int k=0;k<header_sps.length;k++)
-//						Log.e("testCodec","header_sps["+k+"]="+String.format("%02x", header_sps[k]));
-//
-//					for(int k=0;k<header_pps.length;k++)
-//						Log.e("testCodec","header_pps["+k+"]="+String.format("%02x", header_pps[k]));
+
 
                     mediaFormat.setByteBuffer("csd-0", ByteBuffer.wrap(header_vps_sps_pps));
-//                    mediaFormat.setString(MediaFormat.KEY_MIME, MIME_TYPE_HEVC);
-//                    mediaFormat.setByteBuffer("csd-1", ByteBuffer.wrap(header_pps));
+
 
                     decoder.configure(mediaFormat, null /* surface */,
                             null /* crypto */, 0 /* flags */);
@@ -340,12 +325,6 @@ public class MainActivity extends Activity {
                                 break;
                             } else {
 
-                                try {
-//                                    Thread.sleep(33);
-//									Thread.sleep(1000);
-                                } catch (Exception e) {
-                                    e.printStackTrace();
-                                }
 
                                 Log.d("testCodec", "sample size: "
                                         + sampleSize);
